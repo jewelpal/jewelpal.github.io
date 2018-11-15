@@ -29,11 +29,9 @@ function ouch() {
    border-color: #e6e6e6;
 }
 h2   {
-   font-family: verdana;
-   text-align: center;
    font-size: 50px;
 }
-h1   {
+.words   {
    font-family: verdana;
    text-align: center;
 }
@@ -41,7 +39,8 @@ h1   {
 </head>
 <body style="background-color:#ccffff">
 
-<h2>Try to win!!</h2>
+<h2 class="words">Try to win!!</h2>
+<p class="words"><b>INSTRUCTIONS:</b> click on a button. If you get an output, refresh the page. Keep doing this until the output says that you win.</p>
 <p style="text-align:center">
 <button onclick="no()" class="button">If you click the 3<sup>rd</sup> button you will win.</button>
 <button onclick="no()" class="button">Click on Bob.</button>
@@ -49,7 +48,7 @@ h1   {
 <button id="four" onclick="ouch()" class="button">I'm Bob.</button>
 <button onclick="no()" class="button"><b>DON'T</b> click on Bob!</button>
 </p>
-<h1 id="text"></h1>
+<h1 class="words" id="text"></h1>
 
 </body>
 <html>
