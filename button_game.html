@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function yes() { 
+    if (document.getElementById("four").innerHTML == "<b><i>OUCH!!!</i></b>") {
+        document.getElementById("text").innerHTML = "You win! <sub>but Bob is in pain...</sub>";
+    } else if (document.getElementById("four").innerHTML == "I'm Bob.") {
+        document.getElementById("text").innerHTML = "You win!!!";
+    }
+}
+function no() {
+   document.getElementById("text").innerHTML = "Try again!"; 
+}
+function ouch() {
+   document.getElementById("four").innerHTML = "<b><i>OUCH!!!</i></b>";
+}
+function reset() {
+   document.getElementById("text").innerHTML = " ";
+}
+</script>
+<style>
+.button   {
+   font-family: verdana;
+   padding: 20px;
+   background-color: #ffffff;
+   font-size: 18px;
+   border-color: #f2f2f2;
+}
+.button:hover   {
+   background-color: #f2f2f2;
+   border-color: #e6e6e6;
+}
+h2   {
+   font-size: 50px;
+}
+.words   {
+   font-family: verdana;
+   text-align: center;
+}
+#reset   {
+   font-family: verdana;
+   padding: 10px;
+   background-color: #ffffff;
+   font-size: 15px;
+   border-color: #f2f2f2;
+}
+#reset:hover   {
+   background-color: #f2f2f2;
+   border-color: #e6e6e6;
+}
+</style>
+</head>
+<body style="background-color:#ccffff">
+
+<h2 class="words">Try to win!!</h2>
+<p class="words"><b>INSTRUCTIONS:</b> click on a button. If you get an output, click the reset button. Keep doing this until the output says that you win.</p>
+<p style="text-align:center">
+<button onclick="no()" class="button">If you click the 3<sup>rd</sup> button you will win.</button>
+<button onclick="no()" class="button">Click on Bob.</button>
+<button onclick="yes()" class="button">Bob doesn't like it when he gets clicked.</button>
+<button id="four" onclick="ouch()" class="button">I'm Bob.</button>
+<button onclick="no()" class="button"><b>DON'T</b> click on Bob!</button>
+</p>
+<button onclick="reset()" id="reset">Reset</button>
+<h1 class="words" id="text"></h1>
+</body>
+<html>
